@@ -1,0 +1,62 @@
+<resources>
+    <string name="app_name">CounterApp</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="txt_enter_contactnumber">Mobile Number</string>
+    <string name="txt_enter_pass">Enter Password</string>
+    <string name="txt_forget_pass"> \?forget password</string>
+    <string name="txt_dont_have_account">Don\'t have account yet</string>
+    <string name="txt_create_account">Create Account</string>
+    <string name="txt_login">LOG IN</string>
+    <string name="txt_forget_pass_title"> Forget Password</string>
+    <string name="txt_enter_otp">Enter OTP</string>
+    <string name="txt_resend_otp">Resend OTP</string>
+    <string name="txt_confirm_otp">Confirm OTP</string>
+    <string name="txt_change_pass"> \?forget password</string>
+    <string name="txt_enter_new_pass">Enter New Password</string>
+    <string name="txt_repeat_pass">Repeat Password</string>
+    <string name="txt_change_pass_title">Change Password</string>
+    <string name="txt_change_pass_butt">CHANGE PASSWORD</string>
+    <string name="txt_total_point_erned">Total Points Earned: 120</string>
+    <string name="txt_total_durood">Total Durood-e-Sharif Recited: 200</string>
+    <string name="txt_total_recited">Total Recited Today: 50</string>
+    <string name="txt_timer">Timer - 12</string>
+    <string name="txt_reset">RESET</string>
+    <string name="txt_led">LED</string>
+    <string name="txt_count">Count</string>
+    <string name="txt_click_sound">Sound</string>
+    <string name="txt_click_vibration">Vibration</string>
+    <string name="txt_max_counter">Max Counter</string>
+    <string name="txt_play_a_demo_video">Play a demo video</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">About CounterApp</string>
+    <string name="txt_ok">Done</string>
+    <string name="txt_fullname">Full Name</string>
+    <string name="txt_gender">Gender: </string>
+
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="counter_array">
+        <item>"10"</item>
+        <item>"10"</item>
+        <item>"10"</item>
+        <item>"10"</item>
+        <item>"10"</item>
+        <item>"10"</item>
+        <item>"10"</item>
+    </string-array>
+    <string name="title_activity_registration">Registration</string>
+    <string name="txt_registration">User Registration</string>
+    <string-array name="gender_array">
+        <item>"Male"</item>
+        <item>"Female"</item>
+    </string-array>
+
+</resources>

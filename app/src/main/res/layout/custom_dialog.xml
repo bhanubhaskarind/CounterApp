@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="330dp"
+    android:screenOrientation="portrait"
+    android:background="@drawable/custom_dialog_style"
+    android:orientation="vertical" >
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+
+        <TableRow>
+            <TextView
+                android:id="@+id/txt_sound"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/txt_click_sound"
+                android:textColor="@android:color/white"
+                android:textSize="22dp"
+                android:textStyle="bold"/>
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/btn_volume"
+                android:text=""
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:checked="true"/>
+
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/id_vibration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/txt_click_vibration"
+                android:textColor="@android:color/white"
+                android:textSize="22dp"
+                android:textStyle="bold"/>
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/btn_vibrate"
+                android:text=""
+                android:layout_marginTop="5dp"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:checked="true"/>
+
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/id_max_counter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/txt_max_counter"
+                android:textColor="@android:color/white"
+                android:textSize="22sp"
+                android:textStyle="bold"/>
+
+            <Spinner
+                android:id="@+id/max_spinner"
+                android:layout_width="20dp"
+                android:layout_marginTop="15dp"
+                android:textAlignment="center"
+                android:background="@color/colorPrimaryDark"
+                style = "@style/spinner_style"
+                android:layout_height="30dp" />
+        </TableRow>
+
+        <TableRow android:layout_marginTop="20dp">
+            <TextView
+                android:id="@+id/play_a_video"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/txt_play_a_demo_video"
+                android:textColor="@android:color/white"
+                android:textSize="22sp"
+                android:textStyle="bold"/>
+
+
+        </TableRow>
+
+        <TableRow>
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="70dp"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="15sp"
+                android:layout_height="50dp"
+                android:text="@string/txt_ok" />
+        </TableRow>
+
+    </TableLayout>
+
+
+
+
+</LinearLayout>
