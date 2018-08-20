@@ -30,6 +30,7 @@ public class HomeActivity extends AppCompatActivity
     CircleImageView filterButton, resetButton,nightModeButton, pressingButton;
     TextView recitedTodayText;
     Vibrator mVibrator;
+    View  content_frame;
     public static final String MY_PREFS_NAME = "MyPrefsFile";
 
 
@@ -43,9 +44,14 @@ public class HomeActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        resetButton = (CircleImageView)findViewById(R.id.reset);
-        nightModeButton = (CircleImageView)findViewById(R.id.nightMode);
-        pressingButton = (CircleImageView)findViewById(R.id.id_press);
+        getSupportFragmentManager().beginTransaction().replace(R.id.framecheck, new FirstFragment()).commit();
+
+       // content_frame = (LinearLayout)findViewById(R.id.home_layout);
+
+
+//        resetButton = (CircleImageView)findViewById(R.id.reset);
+//        nightModeButton = (CircleImageView)findViewById(R.id.nightMode);
+//        pressingButton = (CircleImageView)findViewById(R.id.id_press);
         recitedTodayText = (TextView)findViewById(R.id.recitedTodayText);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -57,66 +63,50 @@ public class HomeActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        //Press the Action Bar Filter Button
+//        //Press the Action Bar Filter Button
         filterButton = (CircleImageView)findViewById(R.id.filter);
         filterButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
-                SharedPreferences prefs = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE); Log.d("Bhaskar:=======", "isSound: "+"  isVibrate: ");
-                    boolean isSound = prefs.getBoolean("isSound", false);
-                    boolean isVibrate = prefs.getBoolean("isVibrate", false);
-
-
-
-
-                mVibrator  = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                    mVibrator.vibrate(VibrationEffect.createOneShot(500,VibrationEffect.DEFAULT_AMPLITUDE));
-                }else{
-                    mVibrator.vibrate(500);
-                }
-
                 CustomDialogClass dailog = new CustomDialogClass(HomeActivity.this);
                 dailog.show();
 
             }
         });
-
-        //Open the dialog
-        resetButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Log.d("Bhaskar:=======", "reset click: ");
-                ResetCustomDailog dailog = new ResetCustomDailog(HomeActivity.this);
-                dailog.show();
-            }
-        });
 //
-//        // When we press the big Button
-        pressingButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Log.d("Bhaskar:=======", "counter click: ");
-                mVibrator  = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                    mVibrator.vibrate(VibrationEffect.createOneShot(500,VibrationEffect.DEFAULT_AMPLITUDE));
-                }else{
-                    mVibrator.vibrate(500);
-                }
-            }
-        });
+//        //Open the dialog
+//        resetButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
 //
-//        //Night Mode Screen layout
-        nightModeButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.d("Bhaskar:=======", "nightmode click: ");
-            }
-        });
+//                Log.d("Bhaskar:=======", "reset click: ");
+//                ResetCustomDailog dailog = new ResetCustomDailog(HomeActivity.this);
+//                dailog.show();
+//            }
+//        });
+////
+////        // When we press the big Button
+//        pressingButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                Log.d("Bhaskar:=======", "counter click: ");
+//                mVibrator  = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+//                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+//                    mVibrator.vibrate(VibrationEffect.createOneShot(500,VibrationEffect.DEFAULT_AMPLITUDE));
+//                }else{
+//                    mVibrator.vibrate(500);
+//                }
+//            }
+//        });
+////
+////        //Night Mode Screen layout
+//        nightModeButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Log.d("Bhaskar:=======", "nightmode click: ");
+//            }
+//        });
 }
 
     @Override
@@ -148,15 +138,15 @@ public class HomeActivity extends AppCompatActivity
 
         Fragment fragment = null;
         switch (itemId) {
-            case R.id.account:
+            case R.id.about_option:
                 fragment = new FirstFragment();
                 Toast.makeText(this, "First Fragment", Toast.LENGTH_SHORT).show();
                 break;
-            case R.id.settings:
+            case R.id.tasbih_option:
                 fragment = new SecondFragment();
                 Toast.makeText(this, "Second Fragment", Toast.LENGTH_SHORT).show();;
                 break;
-            case R.id.mycart:
+            case R.id.profile_option:
                 fragment = new ThirdFragment();
                 Toast.makeText(this, "Third Fragment", Toast.LENGTH_SHORT).show();;
                 break;
@@ -165,7 +155,7 @@ public class HomeActivity extends AppCompatActivity
         //replacing the fragment
         if (fragment != null) {
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-            ft.replace(R.id.content_frame, fragment);
+            ft.replace(R.id.framecheck, fragment);
             ft.commit();
         }
 

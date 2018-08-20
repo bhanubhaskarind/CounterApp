@@ -16,7 +16,7 @@ import android.widget.Spinner;
 
 import static android.content.Context.MODE_PRIVATE;
 
-public class CustomDialogClass extends Dialog implements View.OnClickListener {
+public class CustomDialogClass extends Dialog {
 
     public Activity c;
     public Button ok_button;
@@ -42,6 +42,7 @@ public class CustomDialogClass extends Dialog implements View.OnClickListener {
         volumeSwitch = (SwitchCompat)findViewById(R.id.btn_volume);
         vibrateSwitch = (SwitchCompat)findViewById(R.id.btn_vibrate);
         max_counter = (Spinner)findViewById(R.id.max_spinner);
+        ok_button = (Button)findViewById(R.id.ok_button);
 
         volumeSwitch.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -75,6 +76,12 @@ public class CustomDialogClass extends Dialog implements View.OnClickListener {
             }
         });
 
+        ok_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dismiss();
+            }
+        });
 //        max_counter.setOnItemClickListener(new );
 // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getContext(),
@@ -85,15 +92,4 @@ public class CustomDialogClass extends Dialog implements View.OnClickListener {
 
     }
 
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.ok_button:
-                dismiss();
-                break;
-            default:
-                break;
-        }
-
-    }
 }

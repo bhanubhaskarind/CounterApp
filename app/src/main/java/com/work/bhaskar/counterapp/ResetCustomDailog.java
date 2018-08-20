@@ -10,7 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 
-public class ResetCustomDailog extends Dialog implements View.OnClickListener {
+public class ResetCustomDailog extends Dialog {
 
     public Activity c;
     public Button reset_Button, cancelButton;
@@ -27,20 +27,21 @@ public class ResetCustomDailog extends Dialog implements View.OnClickListener {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.reset_dailog);
 
-    }
+        reset_Button = (Button)findViewById(R.id.reset_button);
+        cancelButton =(Button)findViewById(R.id.ok_button);
 
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.ok_button:
+        reset_Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 dismiss();
-                break;
-            case R.id.reset_button:
-                this.dismiss();
-                break;
-            default:
-                break;
-        }
+            }
+        });
 
+        cancelButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dismiss();
+            }
+        });
     }
 }

@@ -4,14 +4,48 @@
 
 
 
-    <item android:id="@+id/account"
-        android:title="My Account"/>
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/about_option"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="About" />
+        <item
+            android:id="@+id/tasbih_option"
+            android:icon="@drawable/ic_control_point_black_24dp"
+            android:title="Tasbih" />
+        <item
+            android:id="@+id/news_option"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="News" />
+        <item
+            android:id="@+id/live_conference"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Live Conference" />
 
-    <item android:id="@+id/settings"
-        android:title="Settings"/>
+        <item
+            android:id="@+id/others_option"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Others" />
+    </group>
 
-    <item android:id="@+id/mycart"
-        android:title="My Cart"/>
+    <item android:title="Personal">
+        <menu>
+            <item
+                android:id="@+id/settings_option"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Settings" />
+            <item
+                android:id="@+id/profile_option"
+                android:icon="@drawable/ic_account_circle_black_24dp"
+                android:title="Profile" />
+
+            <item
+                android:id="@+id/logout_optgion"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Log Out" />
+
+        </menu>
+    </item>
 
 
 

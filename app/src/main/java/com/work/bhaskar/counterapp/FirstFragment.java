@@ -2,7 +2,10 @@ package com.work.bhaskar.counterapp;
 
 import android.content.Context;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.VibrationEffect;
+import android.os.Vibrator;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -21,8 +24,9 @@ public class FirstFragment extends Fragment {
         // Required empty public constructor
     }
 
-    CircleImageView filterButton, resetButton,nightModeButton, pressingButton;
+    CircleImageView resetButton,nightModeButton, pressingButton;
     TextView recitedTodayText;
+    Vibrator mVibrator;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -53,6 +57,18 @@ public class FirstFragment extends Fragment {
             }
         });
 
+        //        pressingButton.setOnClickListener(new View.OnClickListener() {
+        pressingButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mVibrator  = (Vibrator) getActivity().getSystemService(Context.VIBRATOR_SERVICE);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                    mVibrator.vibrate(VibrationEffect.createOneShot(500,VibrationEffect.DEFAULT_AMPLITUDE));
+                }else{
+                    mVibrator.vibrate(500);
+                }
+            }
+        });
         return mView;
     }
 
