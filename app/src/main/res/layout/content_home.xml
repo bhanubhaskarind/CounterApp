@@ -7,8 +7,8 @@
     android:id="@+id/content_frame"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".HomeActivity"
+    android:background="#5b1f52 "
     android:orientation="vertical"
-    android:background="@drawable/background_1"
     tools:showIn="@layout/app_bar_home">
 
 
@@ -19,7 +19,7 @@
         android:layout_marginTop="10dp"
         android:textSize="18sp"
         android:layout_marginLeft="5dp"
-        android:textColor="@color/white"
+        android:textColor="@color/textColor1"
         android:text="@string/txt_total_recited" />
 
     <TextView
@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:textSize="18sp"
         android:layout_marginLeft="5dp"
-        android:textColor="@color/white"
+        android:textColor="@color/textColor1"
         android:layout_marginTop="3dp"
         android:text="@string/txt_total_durood" />
 
@@ -45,7 +45,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:textSize="18sp"
-        android:textColor="@color/white"
+        android:textColor="@color/textColor1"
         android:text="@string/txt_total_point_erned" />
 
     <LinearLayout
@@ -60,14 +60,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="18sp"
-            android:textColor="@color/white"
+            android:textColor="@color/textColor1"
             android:text="@string/txt_timer" />
         <ImageView
-            android:layout_width="22dp"
-            android:layout_height="22dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
-            android:layout_marginLeft="30dp"
-            android:background="@drawable/timer_image"/>
+            android:layout_marginLeft="80dp"
+            android:background="@drawable/ic_timer_black_24dp"/>
     </LinearLayout>
 
     <ImageView
@@ -90,7 +90,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginLeft="5dp"
-            android:src="@drawable/bg_main"
+            android:src="@drawable/ic_settings_backup_restore_black_24dp"
             app:civ_border_width="4dp"
             app:civ_border_color="@color/colorPrimary"/>
 
@@ -113,7 +113,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginLeft="70dp"
-            android:src="@drawable/bg_main"
+            android:src="@drawable/ic_ac_unit_black_24dp"
             app:civ_border_width="4dp"
             app:civ_border_color="@color/colorPrimary"/>
 
@@ -132,7 +132,7 @@
             android:layout_height="wrap_content"
             android:textSize="10sp"
             android:layout_marginLeft="5dp"
-            android:textColor="@color/white"
+            android:textColor="@color/textColor1"
             android:text="Reset" />
 
         <TextView
@@ -140,8 +140,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="10sp"
-            android:layout_marginLeft="235dp"
-            android:textColor="@color/white"
+            android:layout_marginLeft="232dp"
+            android:textColor="@color/textColor1"
             android:text="Night Mode" />
 
 
@@ -163,7 +163,7 @@
             android:layout_marginTop="15dp"
             android:layout_marginLeft="15dp"
             android:layout_height="175dp"
-            android:src="@drawable/bg_main"
+            android:src="@drawable/ic_control_point_black_24dp"
             app:civ_border_width="8dp"
             app:civ_border_color="@color/colorAccent"/>
         <!--<ImageButton-->

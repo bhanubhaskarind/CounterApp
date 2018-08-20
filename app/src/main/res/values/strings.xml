@@ -1,19 +1,20 @@
 <resources>
-    <string name="app_name">CounterApp</string>
+    <string name="app_name">My Application</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
-    <string name="txt_enter_contactnumber">Mobile Number</string>
+    <string name="txt_enter_contactnumber">Enter Contact Number</string>
     <string name="txt_enter_pass">Enter Password</string>
     <string name="txt_forget_pass"> \?forget password</string>
-    <string name="txt_dont_have_account">Don\'t have account yet</string>
+    <string name="txt_dont_have_account">Don\'t have account yet?\ \</string>
     <string name="txt_create_account">Create Account</string>
     <string name="txt_login">LOG IN</string>
     <string name="txt_forget_pass_title"> Forget Password</string>
     <string name="txt_enter_otp">Enter OTP</string>
     <string name="txt_resend_otp">Resend OTP</string>
     <string name="txt_confirm_otp">Confirm OTP</string>
-    <string name="txt_change_pass"> \?forget password</string>
+    <string name="txt_change_pass">Change Password</string>
     <string name="txt_enter_new_pass">Enter New Password</string>
+    <string name="txt_enter_new_fullname">Enter Full Name</string>
     <string name="txt_repeat_pass">Repeat Password</string>
     <string name="txt_change_pass_title">Change Password</string>
     <string name="txt_change_pass_butt">CHANGE PASSWORD</string>
@@ -36,21 +37,17 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">About CounterApp</string>
     <string name="txt_ok">Done</string>
-    <string name="txt_fullname">Full Name</string>
     <string name="txt_gender">Gender: </string>
+    <string name="txt_register">Register</string>
 
 
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string-array name="counter_array">
-        <item>"10"</item>
-        <item>"10"</item>
-        <item>"10"</item>
-        <item>"10"</item>
-        <item>"10"</item>
-        <item>"10"</item>
-        <item>"10"</item>
+        <item>"Set 50"</item>
+        <item>"Set 100"</item>
+        <item>"Set 200"</item>
     </string-array>
     <string name="title_activity_registration">Registration</string>
     <string name="txt_registration">User Registration</string>

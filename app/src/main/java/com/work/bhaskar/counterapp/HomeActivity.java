@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.os.VibrationEffect;
 import android.os.Vibrator;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
 import android.view.View;
@@ -48,9 +47,6 @@ public class HomeActivity extends AppCompatActivity
         nightModeButton = (CircleImageView)findViewById(R.id.nightMode);
         pressingButton = (CircleImageView)findViewById(R.id.id_press);
         recitedTodayText = (TextView)findViewById(R.id.recitedTodayText);
-
-
-        recitedTodayText.setText("Bhaskar---------");
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(

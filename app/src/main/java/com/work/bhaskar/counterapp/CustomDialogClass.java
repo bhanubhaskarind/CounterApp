@@ -88,7 +88,7 @@ public class CustomDialogClass extends Dialog implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.button2:
+            case R.id.ok_button:
                 dismiss();
                 break;
             default:

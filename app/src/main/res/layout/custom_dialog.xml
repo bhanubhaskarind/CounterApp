@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="330dp"
-    android:screenOrientation="portrait"
+    android:layout_height="245dp"
     android:background="@drawable/custom_dialog_style"
+    android:screenOrientation="portrait"
     android:orientation="vertical" >
 
     <TableLayout
@@ -18,9 +18,8 @@
                 android:layout_margin="10dp"
                 android:layout_marginTop="20dp"
                 android:text="@string/txt_click_sound"
-                android:textColor="@android:color/white"
-                android:textSize="22dp"
-                android:textStyle="bold"/>
+                android:textColor="@color/textColor1"
+                android:textSize="22dp"/>
 
             <android.support.v7.widget.SwitchCompat
                 android:id="@+id/btn_volume"
@@ -29,6 +28,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
+                android:layout_marginRight="15dp"
                 android:checked="true"/>
 
         </TableRow>
@@ -40,9 +40,8 @@
                 android:layout_margin="10dp"
                 android:layout_marginTop="20dp"
                 android:text="@string/txt_click_vibration"
-                android:textColor="@android:color/white"
-                android:textSize="22dp"
-                android:textStyle="bold"/>
+                android:textColor="@color/textColor1"
+                android:textSize="22dp"/>
 
             <android.support.v7.widget.SwitchCompat
                 android:id="@+id/btn_vibrate"
@@ -50,6 +49,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
+                android:layout_marginRight="15dp"
                 android:checked="true"/>
 
         </TableRow>
@@ -61,42 +61,25 @@
                 android:layout_margin="10dp"
                 android:layout_marginTop="20dp"
                 android:text="@string/txt_max_counter"
-                android:textColor="@android:color/white"
-                android:textSize="22sp"
-                android:textStyle="bold"/>
+                android:textColor="@color/textColor1"
+                android:textSize="22dp"/>
 
             <Spinner
                 android:id="@+id/max_spinner"
-                android:layout_width="20dp"
-                android:layout_marginTop="15dp"
-                android:textAlignment="center"
-                android:background="@color/colorPrimaryDark"
-                style = "@style/spinner_style"
+                android:layout_width="100dp"
+                android:layout_marginTop="10dp"
                 android:layout_height="30dp" />
-        </TableRow>
-
-        <TableRow android:layout_marginTop="20dp">
-            <TextView
-                android:id="@+id/play_a_video"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:layout_marginTop="20dp"
-                android:text="@string/txt_play_a_demo_video"
-                android:textColor="@android:color/white"
-                android:textSize="22sp"
-                android:textStyle="bold"/>
-
-
         </TableRow>
 
         <TableRow>
             <Button
-                android:id="@+id/button2"
-                android:layout_width="70dp"
-                android:layout_marginLeft="100dp"
+                android:id="@+id/ok_button"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="122dp"
                 android:layout_marginTop="15sp"
                 android:layout_height="50dp"
+                android:textColor="@color/white"
+                android:background="@color/colorPrimary"
                 android:text="@string/txt_ok" />
         </TableRow>
 

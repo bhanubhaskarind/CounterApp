@@ -17,7 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@color/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay">
+            app:popupTheme="@style/Theme.AppCompat">
 
             <de.hdodenhof.circleimageview.CircleImageView
                 xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -25,7 +25,7 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginLeft="90dp"
-                android:src="@drawable/filter"
+                android:src="@drawable/ic_filter_list_black_24dp"
 
                 app:civ_border_width="2dp"
                 app:civ_border_color="#FF000000"/>
